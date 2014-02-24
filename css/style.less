@@ -1,0 +1,102 @@
+body, html {
+	background: #285AC2;
+	height: 100%;
+	width: 100%;
+	font-family: 'Open Sans', Serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.title {
+	font-size: 92px;
+	font-weight: 300;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	top: 42%;
+	margin-top: -100px;
+	text-transform: uppercase;
+	color: white;
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.title.inGame {
+	top: 40%;
+	opacity: 0;
+}
+
+.level {
+	position: fixed;
+	z-index: 1;
+	color: white;
+	font-size: 84px;
+	font-weight: bold;
+	left: 40px;
+	top: 20px;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.level.inGame {
+	opacity: 1;
+}
+
+.ball {
+	width: 52px;
+	height: 52px;
+	border-radius: 100px;
+	background: white;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	margin-top: -26px;
+	margin-left: -26px;
+}
+
+.ball.inGame {
+	top: 50%;
+	transition: all 0.3s ease-in-out;
+}
+
+.paddle {
+	opacity: 0.2;
+	background: white;
+	position: fixed;
+	width: 300px;
+	height: 24px;	
+	top: 100%;
+	left: 50%;
+	margin-top: -40px;
+	border-radius: 2px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.paddle.inGame {
+	opacity: 1;
+}
+
+ul.walls {
+	list-style: none;
+	opacity: 0;
+	margin-top: -10px;
+	transition: all 0.3s ease-in-out;
+
+	&.inGame {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+.wall {
+	position: fixed;
+	width: 280px;	
+	height: 3%;
+	margin: 0;
+	background: white;
+	border-radius: 2px;
+	opacity: .2;
+
+	&.active {
+		opacity: 1;
+	}
+}

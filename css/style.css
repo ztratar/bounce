@@ -1,0 +1,67 @@
+body, html {
+	background: blue;
+	height: 100%;
+	width: 100%;
+	font-family: 'Open Sans', Serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.title {
+	font-size: 92px;
+	font-weight: 300;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	top: 42%;
+	margin-top: -100px;
+	text-transform: uppercase;
+	color: white;
+	opacity: 1;
+
+	&.hide {
+		opacity: 0;
+	}
+}
+
+.level {
+	position: fixed;
+	z-index: 1;
+	color: white;
+	font-size: 84px;
+	font-weight: bold;
+	left: 40px;
+	top: 20px;
+	opacity: 0;
+
+	&.show {
+		opacity: 1;
+	}
+}
+
+.ball {
+	width: 52px;
+	height: 52px;
+	border-radius: 100px;
+	background: white;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	margin-top: -26px;
+	margin-left: -26px;
+}
+
+.paddle {
+	opacity: 0.2;
+	background: white;
+	position: fixed;
+	width: 300px;
+	height: 24px;	
+	top: 100%;
+	left: 50%;
+	margin-top: -40px;
+	border-radius: 2px;
+
+	&.show {
+		opacity: 1;
+	}
+}
